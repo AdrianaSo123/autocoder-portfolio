@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { IBM_Plex_Mono, Inter } from "next/font/google";
+import { MainNav } from "@/components/main-nav";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -42,6 +43,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${ibmPlexMono.variable} font-sans antialiased`}>
+        {/* Centralized Main Navigation */}
+        <MainNav />
         {children}
       </body>
     </html>

@@ -1,4 +1,34 @@
-# Color Psychology System
+# Color System
+
+_This page documents the color palette and usage guidelines for the brand._
+
+## Brand Color Palette
+
+Our palette is designed to be professional yet playful and fun, supporting a welcoming and modern brand identity.
+
+| Color Role   | HEX      | HSL                | Description & Use                                 |
+|-------------|----------|--------------------|---------------------------------------------------|
+| Primary     | #246BCE  | 216, 69%, 47%      | Trustworthy, professional blue for main actions   |
+| Secondary   | #37C9A5  | 164, 60%, 51%      | Fresh, friendly teal for secondary actions        |
+| Accent      | #FFB43A  | 38, 100%, 61%      | Playful, energetic orange for highlights          |
+| Background  | #FFFFFF  | 0, 0%, 100%        | Clean, open backgrounds                           |
+| Surface     | #F5F7FA  | 220, 21%, 97%      | Subtle card/section backgrounds                   |
+| Neutral     | #22223B  | 243, 28%, 18%      | Deep, readable text and icon color                |
+
+### Mood & Usage
+- **Primary**: Use for main buttons, navigation, and brand elements. Conveys reliability and clarity.
+- **Secondary**: Use for secondary buttons, backgrounds, and UI accents. Adds freshness and approachability.
+- **Accent**: Use sparingly for highlights, playful touches, and calls-to-action. Brings energy and delight.
+- **Background/Surface**: Keep layouts clean, open, and easy to read.
+- **Neutral**: Use for text, icons, and dividers to ensure accessibility.
+
+### Accessibility & Best Practices
+- Ensure sufficient contrast between text and background (WCAG AA/AAA).
+- Use accent color for emphasis, not for large backgrounds.
+- Combine primary and secondary for a balanced, modern look.
+- Test color combinations for readability and visual harmony.
+
+For quick reference, see the color summary in the [Brand Foundation](01-brand-foundation.md).
 
 ## Scientific Foundation
 
