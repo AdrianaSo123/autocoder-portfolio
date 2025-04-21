@@ -10,7 +10,8 @@ Update website branding and documentation to reflect a friendly, modern, and fun
 - [x] Propose and update color palette and typography in docs and CSS
 - [x] Update homepage messaging and UI to match new brand direction
 - [x] Update layout and global styles for a more inviting yet professional look
-- [ ] Review About and Projects pages for tone, clarity, and style alignment
+- [x] Review About and Projects pages for tone, clarity, and style alignment
+  - Projects page updated to match branding and style (April 21, 2025)
 - [ ] Gather feedback and iterate on design and content changes
 
 ## Acceptance Criteria
@@ -25,6 +26,8 @@ Update website branding and documentation to reflect a friendly, modern, and fun
 - [x] Create About page
 - [x] Create main menu with tabs/links (Projects, Home, About)
 - [x] Create Projects page
+- [x] Fix /projects route and align Projects page with brand (April 21, 2025)
+- [x] Add founder bio and personal section to About page (April 21, 2025)
 - [ ] Continue codebase cleanup and documentation
 
 ---

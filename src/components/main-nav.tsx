@@ -18,6 +18,7 @@ export function MainNav() {
   const routes = [
     { href: "/", label: "Home" },
     { href: "/projects", label: "Projects" },
+    { href: "/gallary", label: "Gallery" },
     { href: "/about", label: "About" },
   ]
 
@@ -34,9 +35,11 @@ export function MainNav() {
             <Link 
               key={route.href} 
               href={route.href}
-              className="text-sm font-medium transition-colors hover:text-primary"
+              className="text-sm font-medium relative px-2 py-1 transition-colors hover:text-primary focus:text-primary group"
+              style={{ overflow: 'hidden' }}
             >
-              {route.label}
+              <span className="z-10 relative">{route.label}</span>
+              <span className="absolute left-0 bottom-0 w-full h-0.5 bg-gradient-to-r from-accent-400 to-primary-500 scale-x-0 group-hover:scale-x-100 group-focus:scale-x-100 transition-transform duration-300 origin-left rounded-full"></span>
             </Link>
           ))}
         </div>
@@ -55,7 +58,8 @@ export function MainNav() {
             <DropdownMenuSeparator />
             {routes.map((route) => (
               <DropdownMenuItem key={route.href} asChild>
-                <Link href={route.href}>{route.label}</Link>
+                <Link href={route.href}><span className="z-10 relative">{route.label}</span>
+              <span className="absolute left-0 bottom-0 w-full h-0.5 bg-gradient-to-r from-accent-400 to-primary-500 scale-x-0 group-hover:scale-x-100 group-focus:scale-x-100 transition-transform duration-300 origin-left rounded-full"></span></Link>
               </DropdownMenuItem>
             ))}
           </DropdownMenuContent>
