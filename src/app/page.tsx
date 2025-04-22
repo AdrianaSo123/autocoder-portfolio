@@ -14,10 +14,10 @@ export default function Home() {
                 'linear-gradient(90deg, var(--primary-500), var(--accent-400), var(--secondary-400))',
             }}
           >
-            Welcome to a More Inclusive, Friendly, and Professional AI Experience
+            Welcome to Adriana So's Creative Portfolio
           </h1>
           <p className="text-lg text-medium-contrast max-w-2xl mx-auto">
-            We believe in making advanced technology accessible, welcoming, and empowering for everyone. Our team values inclusivity, warmth, and professionalism—delivering honest insights and reliable expertise.
+            Explore a curated collection of creative technology projects, design experiments, and personal journeys in innovation. My goal is to inspire curiosity, learning, and self-expression through approachable, modern, and original work.
           </p>
           <div className="flex gap-4 justify-center pt-4">
             <Button
@@ -28,16 +28,18 @@ export default function Home() {
                 borderRadius: '9999px',
                 boxShadow: '0 2px 8px 0 var(--primary-100)',
               }}
+              asChild
             >
-              Get Started
+              <a href="/projects">View Projects</a>
             </Button>
             <Button
               variant="outline"
               size="lg"
               className="text-base border-accent-400 text-accent-700 hover:bg-accent-50"
               style={{ borderRadius: '9999px' }}
+              asChild
             >
-              Learn More
+              <a href="/about">About Me</a>
             </Button>
           </div>
         </div>
@@ -51,7 +53,7 @@ export default function Home() {
             </CardHeader>
             <CardContent>
               <p className="text-medium-contrast">
-                We believe everyone deserves access to empowering technology. Our work and community are open, accessible, and respectful to all.
+                I believe everyone deserves access to empowering technology. My work and community are open, accessible, and respectful to all.
               </p>
             </CardContent>
           </Card>
@@ -63,7 +65,7 @@ export default function Home() {
             </CardHeader>
             <CardContent>
               <p className="text-medium-contrast">
-                We make every interaction positive, supportive, and easy to understand—helping users feel confident and welcome.
+                I make every interaction positive, supportive, and easy to understand—helping users feel confident and welcome.
               </p>
             </CardContent>
           </Card>
@@ -75,31 +77,13 @@ export default function Home() {
             </CardHeader>
             <CardContent>
               <p className="text-medium-contrast">
-                We set high standards for our work and always communicate honestly, building trust through reliability and openness.
+                I set high standards for my work and always communicate honestly, building trust through reliability and openness.
               </p>
             </CardContent>
           </Card>
         </div>
 
-        {/* Call to Revolution Section - Using gradient for visual impact */}
-        <div className="text-center space-y-8 py-16">
-          <h2 className="font-mono tracking-tighter text-gradient-brand max-w-3xl mx-auto">
-            Ready to Break Free from AI Conformity?
-          </h2>
-          <p className="text-lg text-medium-contrast max-w-2xl mx-auto">
-            Join the ranks of Fortune 100 companies who've dared to challenge the established order and revolutionize their industries.
-          </p>
-          <Button
-            size="lg"
-            className="text-base text-white"
-            style={{
-              background: 'linear-gradient(90deg, var(--accent-400), var(--primary-500))',
-              borderRadius: '9999px',
-            }}
-          >
-            Schedule Your Strategy Session
-          </Button>
-        </div>
+
       </main>
     </div>
   );

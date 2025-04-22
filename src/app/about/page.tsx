@@ -6,8 +6,8 @@ export default function AboutPage() {
       {/* Bio Section */}
       <section className="mb-10 text-center">
         <img
-          src="/profile.jpg"
-          alt="Adriana So, Creative Technologist"
+          src="/images/personal/personal.jpeg"
+          alt="Portrait of Adriana So, creative technologist"
           className="mx-auto mb-6 rounded-full w-32 h-32 object-cover shadow-lg border-4 border-primary-200"
           style={{ background: '#fff' }}
         />

@@ -1,19 +1,20 @@
-Brand Foundation Guidelines: The Outlaw AI Consultancy
-(Dr. Evelyn Reed's Professional Recommendations)
+Brand Foundation Guidelines: Adriana So – Creative Portfolio
+
 Core Principles
-Our brand identity is built on psychological principles designed to disrupt complacency, challenge assumptions, and catalyze radical change. This document serves as the foundational reference for all strategic and design decisions, ensuring alignment with our core Outlaw archetype.
-(Dr. Reed's Note: The Outlaw doesn't just 'influence'; it overturns. Every principle must serve this disruptive purpose.)
+My brand identity is built on creative self-expression, professional presentation, and making innovative work accessible, inclusive, and easy to use for everyone. This document serves as the foundational reference for all strategic and design decisions, ensuring alignment with my vision as a creative technologist and portfolio showcase.
+
+(Note: This brand exists to highlight original work, creativity, and a passion for technology—not to consult, but to inspire and connect through showcased projects that are welcoming and usable by all.)
 
 
 ## Quick Reference: Core Brand Principles & Values
 
 | Principle              | Description                                                                 |
 |------------------------|-----------------------------------------------------------------------------|
-| Approachability        | We build trust through empathy, clarity, and authentic communication         |
-| Creative Professionalism| We embrace inventive thinking with a polished, modern execution             |
-| Empowerment            | We uplift and support our users and team members                             |
-| Inclusivity            | We welcome and celebrate diverse perspectives and backgrounds                 |
-| Transparency           | We communicate openly and honestly, always                                   |
+| Approachability        | I share my creative journey with clarity, warmth, and openness               |
+| Creative Excellence    | I pursue inventive, high-quality work and modern execution                   |
+| Empowerment            | I encourage others to explore, learn, and create                             |
+| Inclusivity            | My work welcomes all backgrounds and abilities, and is designed to be accessible and easy to use |
+| Authenticity           | I present my projects honestly and transparently                             |
 
 ---
 
@@ -32,38 +33,44 @@ Use accent colors sparingly for moments of delight. Ensure strong contrast and a
 
 ---
 
-## Actionable Brand Guidelines (For Designers, Writers, Developers)
+## Actionable Brand Guidelines (For Portfolio & Showcasing Work)
 
 > **Do:**
 > - Use clear, inviting language and visuals
-> - Make complex ideas simple and approachable
-> - Incorporate creative, modern elements (color, illustration, icons)
-> - Highlight stories of growth, collaboration, and expertise
-> - Use an encouraging, supportive, and professional voice
-> - Foster a sense of belonging and inclusion
-> - Maintain clarity and honesty in all communication
+> - Make complex projects and ideas accessible and easy to use for all
+> - Incorporate creative, modern design elements (color, illustration, icons)
+> - Highlight my personal stories of growth, learning, and creative process
+> - Ensure accessibility and usability for all backgrounds and abilities
+> - Use an encouraging, supportive, and authentic voice
+> - Foster a sense of belonging and inclusion for all visitors
+> - Maintain clarity, honesty, and a personal touch in all communication
 
 > **Don't:**
 > - Use cold, corporate, or overly formal language
 > - Overwhelm with jargon or technical complexity
 > - Default to generic or impersonal visuals
 > - Exclude or stereotype any audience
-> - Sacrifice clarity or reliability for cleverness
+> - Hide the process—be open about challenges and learning experiences
 
 ---
 
 ## Brand Essence
 
-**Purpose:** To make technology and creativity accessible, enjoyable, and empowering for everyone—without sacrificing professionalism or usability.
+**Purpose:** To inspire others by showcasing creative technology projects and personal growth, making innovation approachable, inclusive, and easy to use for everyone.
 
-**Vision:** To be the most approachable and creative partner for digital innovation, inspiring users to express themselves and achieve their goals with confidence.
+**Vision:** To be recognized as a creative technologist whose work sparks curiosity, learning, self-expression, and a sense of belonging in others.
 
 **Values:**
-- **Approachability:** We listen, empathize, and build relationships through clarity and warmth.
-- **Creative Professionalism:** We celebrate curiosity and inventive solutions, executed with polish and reliability.
-- **Empowerment:** We support growth and self-expression for all.
-- **Inclusivity:** We design for everyone, everywhere.
-- **Transparency:** We are honest and open in all we do.
+- Creativity: Original ideas and inventive solutions
+- Professionalism: Quality, polish, and reliability
+- Approachability: Welcoming, clear, and honest presentation
+- Inclusivity & Usability: Accessible, open to all, and easy for anyone to use
+- Authenticity: Genuine stories and honest project journeys
+- **Approachability:** I listen, empathize, and build relationships through clarity and warmth.
+- **Creative Professionalism:** I celebrate curiosity and inventive solutions, executed with polish and reliability.
+- **Empowerment:** I support growth and self-expression for all.
+- **Inclusivity:** I design for everyone, everywhere.
+- **Transparency:** I am honest and open in all I do.
 
 ---
 
