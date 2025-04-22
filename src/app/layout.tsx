@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { IBM_Plex_Mono, Inter } from "next/font/google";
 import { MainNav } from "@/components/main-nav";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -46,6 +47,7 @@ export default function RootLayout({
         {/* Centralized Main Navigation */}
         <MainNav />
         {children}
+        <Footer />
       </body>
     </html>
   );
