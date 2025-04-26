@@ -1,32 +1,34 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 
+import { MainNav } from '@/components/main-nav';
+
 export default function DataVisualizationProject() {
+  // Height of the navbar (adjust if your navbar height changes)
+  const NAVBAR_HEIGHT = 72; // px (e.g., 4.5rem)
+
   return (
-    <main className="max-w-3xl mx-auto py-16 px-4">
-      <h1 className="text-4xl md:text-5xl font-mono font-bold text-gradient-brand mb-6">Income & Hypertension Visualization</h1>
-      <div className="mb-8">
-        <span className="inline-block bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-xs font-mono mr-2">React</span>
-        <span className="inline-block bg-accent-100 text-accent-700 px-3 py-1 rounded-full text-xs font-mono mr-2">D3.js</span>
-        <span className="inline-block bg-secondary-100 text-secondary-700 px-3 py-1 rounded-full text-xs font-mono">Data Viz</span>
+    <div className="w-full min-h-screen bg-gradient-to-br from-primary-50 via-accent-50 to-secondary-100">
+      <div className="fixed top-0 left-0 w-full z-50">
+        <MainNav />
       </div>
-      <p className="text-lg text-medium-contrast mb-6">
-        This project explores the relationship between median income over time and hypertension rates. Using React components and D3, I created interactive data visualizations to analyze trends and uncover potential connections between socioeconomic status and health outcomes.
-      </p>
-      <div className="flex gap-4 mb-10">
-        <Button
-          asChild
-          className="bg-gradient-to-r from-accent-400 to-primary-500 text-white font-bold px-5 py-2 rounded-full shadow hover:opacity-90 transition"
-        >
-          <a href="https://github.com/AdrianaSo123/health-hypertension_copy" target="_blank" rel="noopener noreferrer">
-            View on GitHub
-          </a>
-        </Button>
-      </div>
-      {/* Placeholder for future screenshots or embedded visualizations */}
-      <div className="bg-gradient-innovation rounded-xl h-64 flex items-center justify-center text-white text-xl font-mono">
-        [ Project Visualization Preview Coming Soon ]
-      </div>
-    </main>
+      <iframe
+        src="/health-and-income-demo/index.html"
+        title="Income & Hypertension Visualization Demo"
+        width="100%"
+        height="100%"
+        style={{
+          position: 'fixed',
+          top: NAVBAR_HEIGHT,
+          left: 0,
+          width: '100vw',
+          height: `calc(100vh - ${NAVBAR_HEIGHT}px)`,
+          border: 'none',
+          background: 'white',
+          zIndex: 10
+        }}
+        allowFullScreen
+      />
+    </div>
   );
 }

@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/health-and-income-demo/static/css/main.d4340ed2.css",
+    "main.js": "/health-and-income-demo/static/js/main.21e319e1.js",
+    "static/js/453.5fb11916.chunk.js": "/health-and-income-demo/static/js/453.5fb11916.chunk.js",
+    "index.html": "/health-and-income-demo/index.html",
+    "main.d4340ed2.css.map": "/health-and-income-demo/static/css/main.d4340ed2.css.map",
+    "main.21e319e1.js.map": "/health-and-income-demo/static/js/main.21e319e1.js.map",
+    "453.5fb11916.chunk.js.map": "/health-and-income-demo/static/js/453.5fb11916.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d4340ed2.css",
+    "static/js/main.21e319e1.js"
+  ]
+}
