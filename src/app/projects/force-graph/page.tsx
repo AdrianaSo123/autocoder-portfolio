@@ -19,18 +19,7 @@ export default function ForceGraphProject() {
       >
         <ForceGraphDemo />
       </main>
-      {/* Footer */}
-      <footer
-        className="w-full bg-card border-t border-primary-100 py-6 text-center text-sm text-foreground/70"
-        style={{ height: FOOTER_HEIGHT, minHeight: FOOTER_HEIGHT }}
-      >
-        <span className="font-mono font-semibold text-primary">Adriana Portfolio</span> &copy; 2025 Adriana So. All rights reserved.
-        <div className="mt-2">
-          <a href="mailto:adriana@email.com" className="text-primary mx-2 font-medium underline underline-offset-2">Email</a>
-          <a href="https://github.com/AdrianaSo123" className="text-primary mx-2 font-medium underline underline-offset-2">GitHub</a>
-          <a href="/" className="text-primary mx-2 font-medium underline underline-offset-2">Home</a>
-        </div>
-      </footer>
+
     </div>
   );
 }

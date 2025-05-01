@@ -42,7 +42,7 @@ export default function ForceGraphDemo() {
   }
 
   return (
-    <div className="flex-1 min-h-0 w-full h-full relative" style={{ background: "hsl(var(--card))" }}>
+    <div className="flex-1 min-h-0 w-full h-full relative" style={{ background: "hsl(var(--card))", height: '100%' }}>
       {graphData ? (
         <ForceGraph3D
           ref={fgRef}
@@ -85,6 +85,23 @@ export default function ForceGraphDemo() {
         ) : (
           <div className="text-foreground/70">Hover or click a node for details.</div>
         )}
+      </div>
+      {/* Legend */}
+      <div
+        className="absolute left-6 top-24 bg-white/90 border border-primary-100 rounded-xl shadow-lg p-6 max-w-xs z-10"
+        style={{ pointerEvents: "auto", minWidth: 180 }}
+        aria-label="Legend"
+      >
+        <strong className="block text-primary font-mono text-base mb-2">Legend</strong>
+        <div className="flex flex-col gap-1 text-sm">
+          <span><span style={{color:'#1976d2'}}>●</span> Core Principle</span>
+          <span><span style={{color:'#43a047'}}>●</span> Usability/Accessibility</span>
+          <span><span style={{color:'#fbc02d'}}>●</span> Aesthetics</span>
+          <span><span style={{color:'#8e24aa'}}>●</span> Information Architecture</span>
+          <span><span style={{color:'#e64a19'}}>●</span> Interaction Design</span>
+          <span><span style={{color:'#0288d1'}}>●</span> User Testing/Research</span>
+          <span><span style={{color:'#757575'}}>●</span> Other Concepts</span>
+        </div>
       </div>
     </div>
   );
