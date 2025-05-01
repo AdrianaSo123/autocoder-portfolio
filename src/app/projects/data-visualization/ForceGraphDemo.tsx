@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useRef, useEffect } from "react";
 import ForceGraph2D, { ForceGraphMethods } from "react-force-graph-2d";
 

@@ -1,6 +1,9 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from "react";
+
+
+
 import dynamic from "next/dynamic";
 
 const ForceGraph3D = dynamic(() => import("react-force-graph-3d"), { ssr: false });
@@ -27,6 +30,37 @@ export default function ForceGraphDemo() {
   const [hoveredNode, setHoveredNode] = useState<Node | null>(null);
   const [selectedNode, setSelectedNode] = useState<Node | null>(null);
 
+  // Continuously disable zoom on OrbitControls so the graph never zooms, but page scroll always works
+  useEffect(() => {
+    let stop = false;
+    function disableZoomLoop() {
+      if (fgRef.current && fgRef.current.controls) {
+        const controls = fgRef.current.controls();
+        if (controls && controls.enableZoom !== undefined) {
+          controls.enableZoom = false;
+        }
+      }
+      if (!stop) requestAnimationFrame(disableZoomLoop);
+    }
+    disableZoomLoop();
+    return () => { stop = true; };
+  }, [fgRef, graphData]);
+
+  // Overlay to capture wheel events and let page scroll
+  const overlayRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const overlay = overlayRef.current;
+    if (!overlay) return;
+    const handleWheel = (e: WheelEvent) => {
+      // Let event bubble up to page, but prevent graph zoom
+      e.stopPropagation();
+    };
+    overlay.addEventListener('wheel', handleWheel, { passive: false });
+    return () => {
+      overlay.removeEventListener('wheel', handleWheel);
+    };
+  }, []);
+
   useEffect(() => {
     fetch("/projects/force-graph/ux-principles.json")
       .then(res => res.json())
@@ -43,6 +77,17 @@ export default function ForceGraphDemo() {
 
   return (
     <div className="flex-1 min-h-0 w-full h-full relative" style={{ background: "hsl(var(--card))", height: '100%' }}>
+      {/* Invisible overlay to capture wheel events and allow page scroll */}
+      <div
+        ref={overlayRef}
+        style={{
+          position: 'absolute',
+          inset: 0,
+          zIndex: 20,
+          background: 'transparent',
+          pointerEvents: 'auto',
+        }}
+      />
       {graphData ? (
         <ForceGraph3D
           ref={fgRef}
@@ -60,6 +105,8 @@ export default function ForceGraphDemo() {
           nodeOpacity={1}
           nodeResolution={16}
           nodeRelSize={7}
+          controlType="orbit"
+          enableNavigationControls={true}
         />
       ) : (
         <div style={{ color: '#333', padding: '20px' }}>Loading...</div>
