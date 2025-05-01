@@ -1,6 +1,29 @@
-import React from "react";
-import { MainNav } from '@/components/main-nav';
+'use client';
+import React, { useEffect, useState } from "react";
 import ForceGraphDemo from './ForceGraphDemo';
+
+function NavHideOnScroll({ children }: { children: React.ReactNode }) {
+  const [show, setShow] = useState(true);
+  useEffect(() => {
+    function onScroll() {
+      setShow(window.scrollY < 300);
+    }
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+  return (
+    <div style={{
+      transform: show ? 'translateY(0)' : 'translateY(-100%)',
+      opacity: show ? 1 : 0,
+      transition: 'transform 0.5s cubic-bezier(.4,2,.6,1), opacity 0.5s',
+      pointerEvents: show ? 'auto' : 'none',
+      position: 'relative',
+      zIndex: 50,
+    }}>
+      {children}
+    </div>
+  );
+}
 
 export default function ForceGraphProject() {
   const NAVBAR_HEIGHT = 72; // px
@@ -8,10 +31,7 @@ export default function ForceGraphProject() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-primary-50 via-accent-50 to-secondary-100">
-      {/* Navigation Bar */}
-      <div className="fixed top-0 left-0 w-full z-50">
-        <MainNav />
-      </div>
+
       {/* Hero Section */}
       <section className="relative z-10 flex flex-col items-center justify-center pt-32 pb-10 px-4 mt-[72px]">
         <div className="backdrop-blur-xl bg-white/70 border border-primary-100 rounded-2xl shadow-2xl p-8 max-w-2xl w-full text-center">
