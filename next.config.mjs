@@ -4,17 +4,9 @@ const nextConfig = {
   swcMinify: true,
   images: {
     formats: ['image/avif', 'image/webp'],
-    remotePatterns: [
-      // Add any remote image domains you might use
-      // {
-      //   protocol: 'https',
-      //   hostname: 'example.com',
-      // },
-    ],
+    remotePatterns: [],
   },
   experimental: {
-    // Enable useful experimental features
-    optimizeCss: true,
     scrollRestoration: true,
   },
 };

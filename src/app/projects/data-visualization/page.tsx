@@ -1,34 +1,36 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
-
 import { MainNav } from '@/components/main-nav';
+import ForceGraphDemo from './ForceGraphDemo';
 
 export default function DataVisualizationProject() {
-  // Height of the navbar (adjust if your navbar height changes)
-  const NAVBAR_HEIGHT = 72; // px (e.g., 4.5rem)
+  const NAVBAR_HEIGHT = 72; // px
+  const FOOTER_HEIGHT = 64; // px
 
   return (
-    <div className="w-full min-h-screen bg-gradient-to-br from-primary-50 via-accent-50 to-secondary-100">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-primary-50 via-accent-50 to-secondary-100">
+      {/* Navigation Bar */}
       <div className="fixed top-0 left-0 w-full z-50">
         <MainNav />
       </div>
-      <iframe
-        src="/health-and-income-demo/index.html"
-        title="Income & Hypertension Visualization Demo"
-        width="100%"
-        height="100%"
-        style={{
-          position: 'fixed',
-          top: NAVBAR_HEIGHT,
-          left: 0,
-          width: '100vw',
-          height: `calc(100vh - ${NAVBAR_HEIGHT}px)`,
-          border: 'none',
-          background: 'white',
-          zIndex: 10
-        }}
-        allowFullScreen
-      />
+      {/* Main Content: Force Graph fills the space between nav and footer */}
+      <main
+        className="flex-1 flex flex-col"
+        style={{ paddingTop: NAVBAR_HEIGHT, paddingBottom: FOOTER_HEIGHT }}
+      >
+        <ForceGraphDemo />
+      </main>
+      {/* Footer */}
+      <footer
+        className="w-full bg-card border-t border-primary-100 py-6 text-center text-sm text-foreground/70"
+        style={{ height: FOOTER_HEIGHT, minHeight: FOOTER_HEIGHT }}
+      >
+        <span className="font-mono font-semibold text-primary">Adriana Portfolio</span> &copy; 2025 Adriana So. All rights reserved.
+        <div className="mt-2">
+          <a href="mailto:adriana@email.com" className="text-primary mx-2 font-medium underline underline-offset-2">Email</a>
+          <a href="https://github.com/AdrianaSo123" className="text-primary mx-2 font-medium underline underline-offset-2">GitHub</a>
+          <a href="/" className="text-primary mx-2 font-medium underline underline-offset-2">Home</a>
+        </div>
+      </footer>
     </div>
   );
 }
