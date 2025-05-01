@@ -25,10 +25,31 @@ interface GraphData {
 
 export default function ForceGraphDemo() {
   const fgRef = useRef<any>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [graphData, setGraphData] = useState<GraphData | null>(null);
   const [descriptions, setDescriptions] = useState<Record<string, string>>({});
   const [hoveredNode, setHoveredNode] = useState<Node | null>(null);
   const [selectedNode, setSelectedNode] = useState<Node | null>(null);
+  const [graphWidth, setGraphWidth] = useState<number>(800);
+  const [graphHeight, setGraphHeight] = useState<number>(600);
+
+  // ResizeObserver to keep graph full-size
+  useEffect(() => {
+    function updateSize() {
+      if (containerRef.current) {
+        setGraphWidth(containerRef.current.offsetWidth);
+        setGraphHeight(containerRef.current.offsetHeight);
+      }
+    }
+    updateSize();
+    const resizeObserver = new (window as any).ResizeObserver(updateSize);
+    if (containerRef.current) resizeObserver.observe(containerRef.current);
+    window.addEventListener('resize', updateSize);
+    return () => {
+      resizeObserver.disconnect();
+      window.removeEventListener('resize', updateSize);
+    };
+  }, []);
 
   // Continuously disable zoom on OrbitControls so the graph never zooms, but page scroll always works
   useEffect(() => {
@@ -46,20 +67,6 @@ export default function ForceGraphDemo() {
     return () => { stop = true; };
   }, [fgRef, graphData]);
 
-  // Overlay to capture wheel events and let page scroll
-  const overlayRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const overlay = overlayRef.current;
-    if (!overlay) return;
-    const handleWheel = (e: WheelEvent) => {
-      // Let event bubble up to page, but prevent graph zoom
-      e.stopPropagation();
-    };
-    overlay.addEventListener('wheel', handleWheel, { passive: false });
-    return () => {
-      overlay.removeEventListener('wheel', handleWheel);
-    };
-  }, []);
 
   useEffect(() => {
     fetch("/projects/force-graph/ux-principles.json")
@@ -77,40 +84,37 @@ export default function ForceGraphDemo() {
 
   return (
     <div className="flex-1 min-h-0 w-full h-full relative" style={{ background: "hsl(var(--card))", height: '100%' }}>
-      {/* Invisible overlay to capture wheel events and allow page scroll */}
       <div
-        ref={overlayRef}
-        style={{
-          position: 'absolute',
-          inset: 0,
-          zIndex: 20,
-          background: 'transparent',
-          pointerEvents: 'auto',
-        }}
-      />
-      {graphData ? (
-        <ForceGraph3D
-          ref={fgRef}
-          graphData={graphData}
-          nodeAutoColorBy="group"
-          nodeLabel={node => `${node.id}\n${getNodeDesc(node as Node)}`}
-          linkDirectionalParticles={2}
-          linkDirectionalParticleSpeed={0.005}
-          linkDirectionalArrowLength={3}
-          linkDirectionalArrowRelPos={1}
-          onNodeHover={node => setHoveredNode(node as Node || null)}
-          onNodeClick={node => setSelectedNode(node as Node || null)}
-          backgroundColor="#f4f6fa"
-          enableNodeDrag={true}
-          nodeOpacity={1}
-          nodeResolution={16}
-          nodeRelSize={7}
-          controlType="orbit"
-          enableNavigationControls={true}
-        />
-      ) : (
-        <div style={{ color: '#333', padding: '20px' }}>Loading...</div>
-      )}
+        ref={containerRef}
+        style={{ position: 'relative', width: '100%', height: '70vh', minHeight: 400, maxHeight: 'calc(100vh - 180px)', pointerEvents: 'auto' }}
+        onWheel={e => { e.stopPropagation(); }}
+      >
+        {graphData ? (
+          <ForceGraph3D
+            ref={fgRef}
+            graphData={graphData}
+            width={graphWidth}
+            height={graphHeight}
+            nodeAutoColorBy="group"
+            nodeLabel={node => `${node.id}\n${getNodeDesc(node as Node)}`}
+            linkDirectionalParticles={2}
+            linkDirectionalParticleSpeed={0.005}
+            linkDirectionalArrowLength={3}
+            linkDirectionalArrowRelPos={1}
+            onNodeHover={node => setHoveredNode(node as Node || null)}
+            onNodeClick={node => setSelectedNode(node as Node || null)}
+            backgroundColor="#f4f6fa"
+            enableNodeDrag={true}
+            nodeOpacity={1}
+            nodeResolution={16}
+            nodeRelSize={7}
+            controlType="orbit"
+            enableNavigationControls={true}
+          />
+        ) : (
+          <div style={{ color: '#333', padding: '20px' }}>Loading...</div>
+        )}
+      </div>
       <div
         className="absolute right-6 top-24 bg-white/90 border border-primary-100 rounded-xl shadow-lg p-6 max-w-xs min-w-[180px] z-10"
         style={{ pointerEvents: "auto" }}
