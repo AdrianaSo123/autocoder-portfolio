@@ -10,6 +10,39 @@ export default function ProjectsPage() {
         </p>
       </section>
       <section className="mb-10 grid md:grid-cols-2 gap-8">
+        {/* AI UX Chat Demo Project Card */}
+        <div className="bg-white rounded-xl shadow-sm border-l-4 border-primary-400 p-8 flex flex-col items-start">
+          <h2 className="text-2xl font-mono font-semibold text-primary-700 mb-2">AI UX Chat Demo</h2>
+          <p className="text-medium-contrast mb-4">
+            An interactive chat experience with an AI UX professional, styled to match the portfolio’s brand. Built with Node.js, Express, Socket.IO, and OpenAI, this project demonstrates conversational AI and real-time UX guidance.
+          </p>
+          <div className="flex flex-wrap gap-2 mb-4">
+            <span className="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-xs font-mono">Node.js</span>
+            <span className="bg-accent-100 text-accent-700 px-3 py-1 rounded-full text-xs font-mono">Socket.IO</span>
+            <span className="bg-secondary-100 text-secondary-700 px-3 py-1 rounded-full text-xs font-mono">OpenAI</span>
+            <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-mono">UX</span>
+            <span className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-mono">Chatbot</span>
+          </div>
+          <div className="flex gap-3 mt-2">
+            <a
+              href="https://js-rags-demo-autocodebase.onrender.com"
+              className="inline-block bg-gradient-to-r from-primary-400 to-accent-400 text-white font-bold px-5 py-2 rounded-full shadow hover:opacity-90 transition text-base font-mono"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Try the AI UX Chat Demo on Render (opens in a new tab)"
+            >
+              Try Demo
+            </a>
+            <a
+              href="https://github.com/AdrianaSo123/autocoder-portfolio/tree/main/reference-projects/JS-RAGS-Demo-autocodebase/ai-ux-chat"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block border border-primary-400 text-primary-700 hover:bg-primary-50 px-5 py-2 rounded-full shadow-sm transition text-base font-mono"
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
         {/* Income & Hypertension Visualization Project Card */}
         <div className="bg-white rounded-xl shadow-sm border-l-4 border-accent-400 p-8 flex flex-col items-start">
           <h2 className="text-2xl font-mono font-semibold text-primary-700 mb-2">Income & Hypertension Visualization</h2>
@@ -24,7 +57,7 @@ export default function ProjectsPage() {
           </div>
           <div className="flex gap-3 mt-2">
             <a
-              href="/projects/data-visualization"
+              href="/projects/health-and-income"
               className="inline-block bg-gradient-to-r from-accent-400 to-primary-500 text-white font-bold px-5 py-2 rounded-full shadow hover:opacity-90 transition text-base font-mono"
             >
               Try Now

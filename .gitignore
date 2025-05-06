@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -42,3 +43,10 @@ yarn-error.log*
 next-env.d.ts
 
 .vercel
+=======
+node_modules/
+.env
+.DS_Store
+npm-debug.log
+netlify-functions/
+>>>>>>> a1b8c1576873c78cc1a9cea6ee8c3c91244448d1

@@ -30,6 +30,15 @@ Update website branding and documentation to reflect a friendly, modern, and fun
 - [x] Add founder bio and personal section to About page (April 21, 2025)
 - [ ] Continue codebase cleanup and documentation
 
+## Reference Projects: AI UX Chat UI Rebranding
+
+- [x] Review current `ai-ux-chat` UI and gather portfolio branding references
+- [x] Update fonts to Inter (body) and IBM Plex Mono (headings)
+- [x] Apply portfolio color palette (primary blue, secondary green, accent purple, neutral dark)
+- [x] Modernize header and add subtitle for portfolio context
+- [ ] QA and polish UI for accessibility and consistency
+- [ ] Review and update any additional assets (logo, favicon, etc.) if needed
+
 ---
 
 _This checklist will be updated as tasks are completed._
