@@ -1,7 +1,33 @@
 import React from "react";
 
 // No fun items yet! Add your images to /public/playground/ and update this array to showcase your experiments.
-const funItems: { title: string; img: string; description: string }[] = [];
+const funItems: { title: string; img: string; description: string }[] = [
+  {
+    title: "Figma Screen",
+    img: "/images/playground/figma%20screen.png",
+    description: "A screenshot from Figma."
+  },
+  {
+    title: "Research Affinity Diagram",
+    img: "/images/playground/research.png",
+    description: "Affinity diagram created during user research to synthesize insights and identify key themes."
+  },
+  {
+    title: "First Ever Figma Project",
+    img: "/images/playground/first%20ever%20figma%20project.png",
+    description: "My very first project in Figma—where my journey into UI/UX design began!"
+  },
+  {
+    title: "Jungwon (Drawing)",
+    img: "/images/playground/jungwon.jpg",
+    description: "A digital drawing of Jungwon, created during my free time as a creative exercise."
+  },
+  {
+    title: "Seagull in California",
+    img: "/images/playground/seagull.jpg",
+    description: "A photo of a seagull taken during a vacation in California."
+  }
+];
 
 export default function PlaygroundPage() {
   return (
@@ -20,8 +46,8 @@ export default function PlaygroundPage() {
       ) : (
         <section className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {funItems.map((item, i) => (
-            <div key={i} className="bg-card rounded-xl shadow-md p-4 flex flex-col items-center">
-              <div className="w-full h-48 flex items-center justify-center bg-neutral-100 rounded-lg overflow-hidden mb-4">
+            <div key={i} className="bg-card rounded-xl shadow-md flex flex-col items-center">
+              <div className="w-full h-[28rem] flex items-center justify-center bg-neutral-100 rounded-lg overflow-hidden mb-2">
                 <img src={item.img} alt={item.title} className="object-contain h-full w-full" />
               </div>
               <h2 className="text-xl font-mono font-semibold text-accent-700 mb-2 text-center">{item.title}</h2>
