@@ -37,12 +37,17 @@ export default function ForceGraphDemo() {
       }
     }
     handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    
+    // Only add event listeners in browser environment
+    if (typeof window !== 'undefined') {
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
   }, []);
 
   React.useEffect(() => {
-    if (fgRef.current) {
+    // Only run on client side
+    if (typeof window !== 'undefined' && fgRef.current) {
       fgRef.current.zoomToFit(400);
     }
   }, [dimensions]);

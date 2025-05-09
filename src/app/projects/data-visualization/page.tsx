@@ -1,5 +1,11 @@
 import React from "react";
-import ForceGraphDemo from './ForceGraphDemo';
+import dynamic from 'next/dynamic';
+
+// Dynamically import the ForceGraphDemo component with SSR disabled
+const ForceGraphDemo = dynamic(
+  () => import('./ForceGraphDemo'),
+  { ssr: false }
+);
 
 export default function DataVisualizationProject() {
   const NAVBAR_HEIGHT = 72; // px
