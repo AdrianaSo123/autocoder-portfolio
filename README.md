@@ -1,172 +1,98 @@
-<<<<<<< HEAD
-# Student Portfolio Starter Project
+# SoKind UX Portfolio
 
-This project provides a baseline Next.js application that you can use as a starting point for creating your professional portfolio. Built with modern web technologies, it offers a solid foundation that you can customize to showcase your skills, projects, and experiences.
+[![Vercel Deployment](https://img.shields.io/badge/Vercel-Deployed-black?style=for-the-badge&logo=vercel)](https://autocoderbase-ow6gvge50-adrianaso123s-projects.vercel.app/)
 
-## Tech Stack
+A professional UX and development portfolio showcasing projects with a focus on accessibility and inclusion. This portfolio highlights my journey as a developer with a passion for UX, featuring interactive visualizations, AI integrations, and accessible design principles.
 
+## 🌐 Live Site
+
+**Visit the live portfolio:** [SoKind UX Portfolio](https://autocoderbase-ow6gvge50-adrianaso123s-projects.vercel.app/)
+
+## ✨ Features
+
+- **Accessible Design**: Built with accessibility and inclusion as core principles
+- **Interactive Projects**: Showcasing data visualizations, force graphs, and AI UX chat
+- **Responsive Layout**: Optimized for all device sizes
+- **Modern UI**: Using Tailwind CSS with custom design system
+- **Contact Form**: Integrated with EmailJS for direct communication
+
+## 🛠️ Tech Stack
+
+### Frontend
 - **[Next.js](https://nextjs.org/)** - React framework with server-side rendering
 - **[TypeScript](https://www.typescriptlang.org/)** - Strongly typed programming language
 - **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
 - **[shadcn/ui](https://ui.shadcn.com/)** - Re-usable components built with Radix UI and Tailwind CSS
-- **ESLint** - Code quality and consistency
-- **Modern UI Components** - Pre-built components in `src/components/ui`
 
-## Getting Started
+### Data & Visualization
+- **[D3.js](https://d3js.org/)** - Data visualization library
+- **Force Graph** - Interactive network visualization
+- **Data Analysis** - Exploring relationships between income and health metrics
+
+### AI & Tools
+- **[OpenAI API](https://openai.com/api/)** - Powering the AI UX Chat demo
+- **[Socket.IO](https://socket.io/)** - Real-time communication
+- **[EmailJS](https://www.emailjs.com/)** - Contact form functionality
+- **[Vercel](https://vercel.com/)** - Deployment platform
+
+## 📂 Project Structure
+
+```
+├── public/                 # Static assets and data files
+├── src/
+│   ├── app/                # Next.js App Router pages
+│   │   ├── about/          # About page
+│   │   ├── contact/        # Contact page
+│   │   ├── playground/     # UX Portfolio page
+│   │   ├── projects/       # Projects and demos
+│   │   └── page.tsx        # Home page
+│   ├── components/         # Reusable UI components
+│   └── lib/                # Utility functions
+└── tailwind.config.mjs     # Tailwind CSS configuration
+```
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
-Make sure you have the following installed:
 - Node.js (v18 or newer)
 - npm or yarn package manager
 
 ### Installation
 
-1. Clone this repository to your local machine:
+1. Clone this repository:
    ```bash
-   git clone <repository-url>
-   cd contentGen322
+   git clone https://github.com/AdrianaSo123/autocoder-portfolio.git
+   cd autocoder-portfolio
    ```
 
-2. Install the dependencies:
+2. Install dependencies:
    ```bash
    npm install
-   # or
-   yarn install
    ```
 
 3. Start the development server:
    ```bash
    npm run dev
-   # or
-   yarn dev
    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## Project Structure
+## 📱 Featured Projects
 
-```
-├── docs/                   # Design system documentation
-├── public/                 # Static assets (images, etc.)
-├── src/
-│   ├── app/                # Next.js App Router
-│   │   ├── globals.css     # Global CSS
-│   │   ├── layout.tsx      # Root layout
-│   │   └── page.tsx        # Home page
-│   ├── components/
-│   │   └── ui/             # Reusable UI components
-│   └── lib/                # Utility functions
-└── tailwind.config.mjs     # Tailwind CSS configuration
-```
+### AI UX Chat Demo
+A real-time chat application that provides UX advice powered by OpenAI's API, featuring a responsive interface and interactive chat experience.
 
-## Customizing Your Portfolio
+### Income & Hypertension Visualization
+An interactive data visualization exploring the relationship between median income and hypertension rates across Georgia counties.
 
-1. **Personal Information**: Modify the content in `src/app/page.tsx` to include your name, bio, and introduction.
+### Force Graph Demo
+A dynamic force-directed graph visualization demonstrating network relationships with interactive nodes and connections.
 
-2. **Projects**: Create new components to showcase your projects and add them to your pages.
+## 📝 License
 
-3. **Styling**: Customize the look and feel by modifying `tailwind.config.mjs` and `globals.css`.
-
-4. **Components**: Use the pre-built UI components in `src/components/ui` or create your own.
-
-## Design Documentation
-
-Check the `docs/` directory for guidance on:
-- Brand foundation
-- Typography
-- Color system
-- Spacing and layout
-- Components
-- Implementation guidelines
-
-## Working with the Design System and AI Tools
-
-The `docs/` directory contains comprehensive design system documentation that serves as a blueprint for your portfolio. Here's how to make the most of these resources with AI coding assistants:
-
-### Using the Documentation
-
-1. **Start with the Foundation**: Begin by reviewing `01-brand-foundation.md` and `02-typography.md` to understand the core design principles.
-
-2. **Follow the Progression**: The documentation files are numbered in a recommended reading order, building from foundational concepts to specific implementation details.
-
-3. **Reference as Needed**: As you develop different aspects of your portfolio, refer to the relevant documentation (e.g., check `03-color-system.md` when working on visual styling).
-
-### Tips for Working with AI Autocoders
-
-1. **Share Context**: When asking AI tools for help, reference specific documentation files to provide important context. For example: "Help me implement a button according to the design system in docs/05-components.md."
-
-2. **Use Documentation as Prompts**: Extract design specifications and requirements from the documentation to create effective prompts for AI assistance.
-
-3. **Iterative Approach**: Start with a basic implementation suggested by AI, then refine it by referencing the appropriate documentation and asking for improvements.
-
-4. **Verify Consistency**: Use the documentation to verify that AI-generated code follows your design system consistently.
-
-5. **Ask for Explanations**: Request that the AI explain how its suggestions align with the design system, which helps you understand both the code and design principles better.
-
-6. **Learning Opportunity**: Use AI as a teaching tool by asking it to explain why certain design choices were made in the documentation and how they impact the implementation.
-
-7. **Combine Human Creativity with AI Efficiency**: Use AI to handle boilerplate code and implementation details while focusing your creativity on the unique aspects of your portfolio.
-
-By effectively combining the design documentation with AI tools, you'll create a more cohesive, professional portfolio while developing valuable skills in design systems and working with AI assistants.
-
-## Deployment
-
-When you're ready to deploy your portfolio, we recommend using [Vercel](https://vercel.com) for the easiest deployment experience:
-
-1. Create an account on Vercel
-2. Connect your GitHub account
-3. Import this repository
-4. Deploy
-
-Alternatively, you can deploy to any hosting service that supports Next.js applications.
-
-## Additional Resources
-
-- [Next.js Documentation](https://nextjs.org/docs)
-- [TypeScript Documentation](https://www.typescriptlang.org/docs)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-
----
-
-Happy coding! Use this starter project to create an impressive portfolio that stands out to potential employers.
-=======
-# AI UX Chat Demo
-
-A real-time chat demo with an AI UX professional using Node.js, Express, Socket.IO, and OpenAI.
-
-## Features
-- Real-time chat interface styled to match portfolio branding
-- AI-powered UX advice via OpenAI API
-- Modern, accessible, and mobile-friendly UI
-
-## Getting Started
-
-1. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-2. **Create a `.env` file:**
-   ```bash
-   cp .env.example .env
-   # Add your OpenAI API key to .env
-   ```
-3. **Start the server:**
-   ```bash
-   npm start
-   ```
-4. **Visit:**
-   [http://localhost:3002](http://localhost:3002)
-
-## Deployment (Render)
-- Push this folder to a GitHub repository.
-- Create a new Web Service on [Render](https://render.com/).
-- Set the environment variable `OPENAI_API_KEY`.
-- Use `node server.js` as the start command.
-
-## Environment Variables
-- `OPENAI_API_KEY` – Your OpenAI API key for chat completion.
-
----
 MIT License
->>>>>>> a1b8c1576873c78cc1a9cea6ee8c3c91244448d1
+
+---
+
+Designed and developed with a focus on accessibility and inclusion.
