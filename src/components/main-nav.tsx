@@ -18,15 +18,16 @@ export function MainNav() {
   const routes = [
     { href: "/", label: "Home" },
     { href: "/projects", label: "Projects" },
-    { href: "/playground", label: "Playground" },
+    { href: "/playground", label: "UX Portfolio" },
     { href: "/about", label: "About" },
+    { href: "/contact", label: "Contact" },
   ]
 
   return (
     <nav className="flex items-center justify-between w-full py-4 px-6 md:px-12">
       <div className="flex items-center gap-6">
-        <Link href="/" className="text-xl font-bold">
-          Portfolio
+        <Link href="/" className="text-xl font-bold font-mono text-primary-600">
+          SoKind UX
         </Link>
         
         {/* Desktop Navigation */}

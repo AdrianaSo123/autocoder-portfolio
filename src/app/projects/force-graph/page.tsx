@@ -32,7 +32,7 @@ export default function ForceGraphProject() {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-primary-50 via-accent-50 to-secondary-100">
 
-      {/* Hero Section */}
+      {/* Main Section */}
       <section className="relative z-10 flex flex-col items-center justify-center pt-32 pb-10 px-4 mt-[72px]">
         <div className="backdrop-blur-xl bg-white/70 border border-primary-100 rounded-2xl shadow-2xl p-8 max-w-2xl w-full text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold font-mono text-primary mb-3 drop-shadow-md">UX Principles Force Graph</h1>

@@ -1,0 +1,6 @@
+{"type": "FeatureCollection", "features": [
+{"type": "Feature", "properties": {"GEO_ID": "0500000US13001", "STATE": "13", "COUNTY": "001", "NAME": "Appling", "LSAD": "County", "CENSUSAREA": 507.689}, "geometry": {"type": "Polygon", "coordinates": [[[-82.4025, 31.7527], [-82.4025, 31.8027], [-82.3525, 31.8027], [-82.3525, 31.7527], [-82.4025, 31.7527]]]}, "id": "13001"},
+{"type": "Feature", "properties": {"GEO_ID": "0500000US13003", "STATE": "13", "COUNTY": "003", "NAME": "Atkinson", "LSAD": "County", "CENSUSAREA": 338.864}, "geometry": {"type": "Polygon", "coordinates": [[[-82.9825, 31.2527], [-82.9825, 31.3027], [-82.9325, 31.3027], [-82.9325, 31.2527], [-82.9825, 31.2527]]]}, "id": "13003"},
+{"type": "Feature", "properties": {"GEO_ID": "0500000US13005", "STATE": "13", "COUNTY": "005", "NAME": "Bacon", "LSAD": "County", "CENSUSAREA": 284.858}, "geometry": {"type": "Polygon", "coordinates": [[[-82.4825, 31.3527], [-82.4825, 31.4027], [-82.4325, 31.4027], [-82.4325, 31.3527], [-82.4825, 31.3527]]]}, "id": "13005"}
+// ... (features for all other Georgia counties should be inserted here)
+]}

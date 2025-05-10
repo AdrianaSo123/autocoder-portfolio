@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="w-full border-t bg-white/70 text-neutral-800 py-6 mt-12">
-      <div className="max-w-3xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 px-4">
+    <footer className="w-full border-t bg-white/70 text-neutral-800 py-3 mt-6">
+      <div className="max-w-3xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2 px-4">
         <div className="text-sm font-mono tracking-tight">&copy; {new Date().getFullYear()} Adriana So</div>
         <div className="flex gap-6 text-lg">
           <a

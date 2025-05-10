@@ -19,12 +19,12 @@ const ibmPlexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Adriana So Portfolio",
-    template: "%s | Adriana So Portfolio",
+    default: "SoKind UX | Empathy-first UX Mentoring",
+    template: "%s | SoKind UX",
   },
-  description: "Creative technologist, developer, and designer. Explore projects, experiments, and digital work by Adriana So.",
+  description: "SoKind UX provides empathy-first UX mentoring and consulting for new designers. Explore our projects, resources, and design expertise.",
   authors: [{ name: "Adriana So" }],
-  keywords: ["portfolio", "creative technologist", "developer", "designer", "projects", "Adriana So"],
+  keywords: ["UX design", "UX mentoring", "empathy-first design", "UX consulting", "Nielsen Norman", "UX resources", "SoKind UX"],
 };
 
 export const viewport: Viewport = {
