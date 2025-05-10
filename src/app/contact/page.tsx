@@ -19,9 +19,12 @@ export default function ContactPage() {
   const [error, setError] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const fieldName = e.target.name === 'user_name' ? 'name' : 
+                     e.target.name === 'user_email' ? 'email' : 'message';
+    
     setFormState({
       ...formState,
-      [e.target.name]: e.target.value,
+      [fieldName]: e.target.value,
     });
   };
 
@@ -132,6 +135,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     placeholder="Your name"
                     required
+                    className="bg-white"
                   />
                 </div>
                 
@@ -145,6 +149,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     placeholder="Your email address"
                     required
+                    className="bg-white"
                   />
                 </div>
                 
@@ -158,6 +163,7 @@ export default function ContactPage() {
                     placeholder="Your message"
                     rows={5}
                     required
+                    className="bg-white"
                   />
                 </div>
                 
